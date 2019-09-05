@@ -40,7 +40,7 @@ public class MainActivity extends AppCompatActivity {
         mBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String domin = mEditText.getText().toString();
+                final String domin = mEditText.getText().toString();
                 builer = new StringBuilder();
                 if (!TextUtils.isEmpty(domin)) {
                     mBtn.setEnabled(false);
@@ -70,7 +70,7 @@ public class MainActivity extends AppCompatActivity {
                                         }
                                     });
                                 }
-                            }).beginTrace("www.baidu.com");
+                            }).beginTrace(domin);
                         }
                     }).start();
                 }
